@@ -43,8 +43,8 @@ tensorboard = TensorBoard(log_dir='output/log_%s_model' % key,write_graph=False,
 
 m.fit_generator(generator=G,
                       steps_per_epoch=math.ceil(367./train_batch_size),
-                      epochs=epochs,callbacks=[],
-                      verbose=1,
+                      epochs=epochs,callbacks=[checkpoint,tensorboard],
+                      verbose=2,
                       validation_data=G_test,
                       validation_steps=8,
                       shuffle=True)
