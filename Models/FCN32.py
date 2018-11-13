@@ -1,6 +1,7 @@
 from keras.applications import vgg16
 from keras.models import Model,Sequential
 from keras.layers import Conv2D, Conv2DTranspose, Input, Cropping2D, add, Dropout, Reshape, Activation
+from keras.utils import plot_model
 
 
 def FCN32(nClasses, input_height, input_width):
@@ -37,6 +38,6 @@ def FCN32(nClasses, input_height, input_width):
 
 if __name__ == '__main__':
     m = FCN32(15,320, 320)
-    from keras.utils import plot_model
-    plot_model(m, show_shapes=True, to_file='model.png')
+    m.summary()
+    plot_model(m, show_shapes=True, to_file='model_fcn32.png')
     print(len(m.layers))
