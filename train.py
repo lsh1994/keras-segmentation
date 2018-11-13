@@ -39,7 +39,7 @@ G_test=LoadBatches.imageSegmentationGenerator(val_images_path,
                                    val_segs_path, val_batch_size, n_classes=n_classes, input_height=input_height,input_width=input_width)
 
 checkpoint = ModelCheckpoint(filepath="output/%s_model.h5" % key, monitor='acc', mode='auto', save_best_only='True')
-tensorboard = TensorBoard(log_dir='output/log_%s_model' % key,write_graph=False,histogram_freq=1,write_grads=True,write_images=True)
+tensorboard = TensorBoard(log_dir='output/log_%s_model' % key)
 
 m.fit_generator(generator=G,
                       steps_per_epoch=math.ceil(367./train_batch_size),
