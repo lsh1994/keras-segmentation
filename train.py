@@ -11,7 +11,7 @@ train_segs_path = "data/dataset1/annotations_prepped_train/"
 train_batch_size = 16
 n_classes =11
 
-epochs = 200
+epochs = 500
 
 input_height=320
 input_width=320
@@ -22,7 +22,7 @@ val_images_path = "data/dataset1/images_prepped_test/"
 val_segs_path = "data/dataset1/annotations_prepped_test/"
 val_batch_size = 16
 
-key="fcn32"
+key="fcn8"
 
 
 ##################################
