@@ -8,7 +8,7 @@ import math
 #############################################################################
 train_images_path = "data/dataset1/images_prepped_train/"
 train_segs_path = "data/dataset1/annotations_prepped_train/"
-train_batch_size = 16
+train_batch_size = 8
 n_classes =11
 
 epochs = 500
@@ -20,7 +20,7 @@ input_width=320
 
 val_images_path = "data/dataset1/images_prepped_test/"
 val_segs_path = "data/dataset1/annotations_prepped_test/"
-val_batch_size = 16
+val_batch_size = 8
 
 key="segnet"
 

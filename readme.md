@@ -41,5 +41,4 @@ https://drive.google.com/file/d/0B0d9ZiqAgFkiOHR1NTJhWVJMNEU/view?usp=sharing
 
 ### SegNet
 [文章参考](https://blog.csdn.net/nima1994/article/details/85079510)  
-可视化结果：  
-待更……
+

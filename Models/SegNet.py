@@ -91,7 +91,7 @@ def SegNet(nClasses, input_height, input_width):
     # mymodel.summary()
 
     # 加载vgg16的预训练权重
-    Vgg_streamlined.load_weights("../data/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5")
+    Vgg_streamlined.load_weights(r"E:\Code\PycharmProjects\keras-segmentation\data\vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5")
 
     # 解码层
     unpool_1 = MaxUnpooling2D()([x, mask_5])
