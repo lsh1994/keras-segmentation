@@ -1,7 +1,7 @@
 from keras.callbacks import ModelCheckpoint, TensorBoard
 
 import LoadBatches
-from Models import FCN8,FCN32
+from Models import FCN8,FCN32,SegNet
 from keras import optimizers
 import math
 
@@ -22,12 +22,12 @@ val_images_path = "data/dataset1/images_prepped_test/"
 val_segs_path = "data/dataset1/annotations_prepped_test/"
 val_batch_size = 16
 
-key="fcn8"
+key="segnet"
 
 
 ##################################
 
-method={"fcn32":FCN32.FCN32,"fcn8":FCN8.FCN8}
+method={"fcn32":FCN32.FCN32,"fcn8":FCN8.FCN8,'segnet':SegNet.SegNet}
 
 m = method[key](n_classes,input_height=input_height,input_width=input_width)
 m.compile(loss='categorical_crossentropy',optimizer="adadelta",metrics=['acc'])
