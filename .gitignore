@@ -1,8 +1,5 @@
-/data/dataset1/annotations_prepped_test
-/data/dataset1/annotations_prepped_train
-/data/dataset1/images_prepped_test
-/data/dataset1/images_prepped_train
+/data
 /__pycache__
-/Models/__pycache__
 /.idea
 /test
+/Models/__pycache__
