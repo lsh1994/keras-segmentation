@@ -23,9 +23,7 @@ https://drive.google.com/file/d/0B0d9ZiqAgFkiOHR1NTJhWVJMNEU/view?usp=sharing
 `python predict.py`:预测  
 请自行修改代码中相关参数切换模型，或者克隆历史版本。
 
-## 进展
-
-目前完成了FCN32、FCN8、SegNet。
+## 详细描述
 
 ### FCN32
 
@@ -43,8 +41,8 @@ https://drive.google.com/file/d/0B0d9ZiqAgFkiOHR1NTJhWVJMNEU/view?usp=sharing
 ### SegNet
 [文章参考](https://blog.csdn.net/nima1994/article/details/85079510)  
 
-### UNet
-待更新...
+### U-Net
+[文章参考](https://blog.csdn.net/nima1994/article/details/86300172)
 
 
 ## 注意
