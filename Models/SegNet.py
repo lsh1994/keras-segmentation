@@ -86,10 +86,6 @@ def SegNet(nClasses, input_height, input_width):
 
     Vgg_streamlined=Model(inputs=img_input,outputs=x)
 
-    # o=None
-    # fcn8=Model(inputs=img_input,outputs=o)
-    # mymodel.summary()
-
     # 加载vgg16的预训练权重
     Vgg_streamlined.load_weights(r"E:\Code\PycharmProjects\keras-segmentation\data\vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5")
 
