@@ -16,7 +16,8 @@ def getImageArr(im):
 
     return img
 
-def getSegmentationArr(seg, nClasses,input_height, input_width):
+
+def getSegmentationArr(seg, nClasses, input_height, input_width):
 
     seg_labels = np.zeros((input_height, input_width, nClasses))
 
@@ -33,8 +34,8 @@ def imageSegmentationGenerator(images_path, segs_path, batch_size,
     assert images_path[-1] == '/'
     assert segs_path[-1] == '/'
 
-    images = sorted(glob.glob(images_path +"*.jpg") +
-                    glob.glob(images_path +"*.png") +glob.glob(images_path +"*.jpeg"))
+    images = sorted(glob.glob(images_path + "*.jpg") +
+                    glob.glob(images_path + "*.png") + glob.glob(images_path + "*.jpeg"))
 
     segmentations = sorted(glob.glob(segs_path + "*.jpg") +
                            glob.glob(segs_path + "*.png") + glob.glob(segs_path + "*.jpeg"))
@@ -47,20 +48,25 @@ def imageSegmentationGenerator(images_path, segs_path, batch_size,
         for _ in range(batch_size):
             im, seg = zipped.__next__()
             im = cv2.imread(im, 1)
-            seg=cv2.imread(seg,0)
+            seg = cv2.imread(seg, 0)
 
-            assert im.shape[:2]==seg.shape[:2]
+            assert im.shape[:2] == seg.shape[:2]
 
-            assert im.shape[0]>=input_height and im.shape[1]>=input_width
+            assert im.shape[0] >= input_height and im.shape[1] >= input_width
 
-            xx = random.randint(0,im.shape[0]-input_height)
-            yy = random.randint(0,im.shape[1]-input_width)
+            xx = random.randint(0, im.shape[0] - input_height)
+            yy = random.randint(0, im.shape[1] - input_width)
 
             im = im[xx:xx + input_height, yy:yy + input_width]
             seg = seg[xx:xx + input_height, yy:yy + input_width]
 
             X.append(getImageArr(im))
-            Y.append(getSegmentationArr(seg,n_classes,input_height, input_width))
+            Y.append(
+                getSegmentationArr(
+                    seg,
+                    n_classes,
+                    input_height,
+                    input_width))
 
         yield np.array(X), np.array(Y)
 

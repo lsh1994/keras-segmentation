@@ -2,7 +2,8 @@ import glob
 import numpy as np
 import cv2
 import random
-from skimage import color,exposure
+from skimage import color, exposure
+
 
 def imageSegmentationGenerator(images_path, segs_path, n_classes):
 
@@ -19,9 +20,8 @@ def imageSegmentationGenerator(images_path, segs_path, n_classes):
         glob.glob(
             images_path +
             "*.jpeg"))
-    segmentations = glob.glob(
-        segs_path + "*.jpg") + glob.glob(segs_path + "*.png") + glob.glob(segs_path + "*.jpeg")
-    segmentations.sort()
+    segmentations = sorted(glob.glob(
+        segs_path + "*.jpg") + glob.glob(segs_path + "*.png") + glob.glob(segs_path + "*.jpeg"))
 
     colors = [
         (random.randint(
@@ -47,18 +47,24 @@ def imageSegmentationGenerator(images_path, segs_path, n_classes):
             seg_img[:, :, 2] += ((seg[:, :, 0] == c) *
                                  (colors[c][2])).astype('uint8')
 
-        eqaimg=color.rgb2hsv(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
-        eqaimg[:,:,2]=exposure.equalize_hist(eqaimg[:,:,2])
-        eqaimg=color.hsv2rgb(eqaimg)
+        eqaimg = color.rgb2hsv(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        eqaimg[:, :, 2] = exposure.equalize_hist(eqaimg[:, :, 2])
+        eqaimg = color.hsv2rgb(eqaimg)
 
         cv2.imshow("img", img)
         cv2.imshow("seg_img", seg_img)
-        cv2.imshow("equalize_hist_img",cv2.cvtColor((eqaimg*255.).astype(np.uint8),cv2.COLOR_RGB2BGR))
+        cv2.imshow(
+            "equalize_hist_img",
+            cv2.cvtColor(
+                (eqaimg *
+                 255.).astype(
+                    np.uint8),
+                cv2.COLOR_RGB2BGR))
         cv2.waitKey()
 
 
-images="data/dataset1/images_prepped_train/"
-annotations="data/dataset1/annotations_prepped_train/"
-n_classes=11
+images = "data/dataset1/images_prepped_train/"
+annotations = "data/dataset1/annotations_prepped_train/"
+n_classes = 11
 
 imageSegmentationGenerator(images, annotations, n_classes)

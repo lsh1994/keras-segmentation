@@ -1,6 +1,6 @@
 import LoadBatches
 from keras.models import load_model
-from Models import FCN32, FCN8 ,SegNet
+from Models import FCN32, FCN8, SegNet, UNet
 import glob
 import cv2
 import numpy as np
@@ -8,9 +8,13 @@ import random
 
 n_classes = 11
 
-key = "segnet"
+key = "unet"
 
-method = {"fcn32": FCN32.FCN32, "fcn8": FCN8.FCN8,"segnet":SegNet.SegNet}
+method = {
+    "fcn32": FCN32.FCN32,
+    "fcn8": FCN8.FCN8,
+    "segnet": SegNet.SegNet,
+    'unet': UNet.UNet}
 
 images_path = "data/dataset1/images_prepped_test/"
 segs_path = "data/dataset1/annotations_prepped_test/"
@@ -57,13 +61,12 @@ images = sorted(
     glob.glob(
         images_path +
         "*.jpeg"))
-segmentations = glob.glob(segs_path + "*.jpg") + \
-    glob.glob(segs_path + "*.png") + glob.glob(segs_path + "*.jpeg")
-segmentations.sort()
+segmentations = sorted(glob.glob(segs_path + "*.jpg") +
+                       glob.glob(segs_path + "*.png") + glob.glob(segs_path + "*.jpeg"))
 
 
 # m = load_model("output/%s_model.h5" % key)
-m=method[key](11,320,320) # 有自定义层，不能直接加载模型
+m = method[key](11, 320, 320)  # 有自定义层时，不能直接加载模型
 m.load_weights("output/%s_model.h5" % key)
 
 for i, (imgName, segName) in enumerate(zip(images, segmentations)):

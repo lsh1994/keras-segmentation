@@ -20,7 +20,8 @@ https://drive.google.com/file/d/0B0d9ZiqAgFkiOHR1NTJhWVJMNEU/view?usp=sharing
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181113165336706.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25pbWExOTk0,size_16,color_FFFFFF,t_70)
 
 `python train.py`:训练  
-`python predict.py`:预测
+`python predict.py`:预测  
+请自行修改代码中相关参数切换模型，或者克隆历史版本。
 
 ## 进展
 
@@ -42,3 +43,6 @@ https://drive.google.com/file/d/0B0d9ZiqAgFkiOHR1NTJhWVJMNEU/view?usp=sharing
 ### SegNet
 [文章参考](https://blog.csdn.net/nima1994/article/details/85079510)  
 
+
+## 注意
+非论文的原始实现。  
