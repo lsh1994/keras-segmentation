@@ -1,7 +1,8 @@
+<font color=red>本项目不再更新。有个令人迷惑的地方，请参考issues5。谢谢支持。</font>
 ## 实验环境
 win10；python3.6.7 ；
   
-项目     | Value
+Item     | Value
 -------- | -----
 keras | 2.2.4  
 tensorflow-gpu | 1.10.0
