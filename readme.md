@@ -1,4 +1,4 @@
-<font color=red>本项目不再更新。有个令人迷惑的地方，请参考issues5。谢谢支持。</font>
+<font color=red>本项目不再更新。有个令人迷惑的地方，请参考issues5等。欢迎 `Pull requests`，谢谢支持。</font>
 ## 实验环境
 win10；python3.6.7 ；
   
