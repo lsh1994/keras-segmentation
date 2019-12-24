@@ -7,14 +7,15 @@
 <font color=red>已经发布模型FCN32/8、SegNet、U-Net [对应提交](https://github.com/lsh1994/keras-segmentation/releases)。有个令人迷惑的地方，请参考issues5等。</font>
 
 ## 实验环境
-win10；python3.6.7 ；
-  
-Item     | Value
--------- | -----
-keras | 2.2.4  
-tensorflow-gpu | 1.10.0
 
-实验参考：  
+  
+Item     | Value | Item     | Value
+:---: | :---: | :---: | :---: 
+keras | 2.2.4  | OS | win10
+tensorflow-gpu | 1.10.0 | Python| 3.6.7
+
+## 参考 
+
 https://github.com/divamgupta/image-segmentation-keras  
 https://github.com/ykamikawa/SegNet  
   

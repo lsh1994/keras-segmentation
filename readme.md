@@ -4,19 +4,19 @@
 Implementation is not original papers. The purpose of this project is to get started with semantic segmentation and master the basic process.
 </p>
 
-<font color=red>FCN32/8、SegNet、U-Net [Model published](https://github.com/lsh1994/keras-segmentation/releases)。There is a confusing place, please refer to issues 5 and so on.Thank you for your support.</font> 
+<font color=red>FCN32/8、SegNet、U-Net [Model published](https://github.com/lsh1994/keras-segmentation/releases)。There is a confusing place, please refer to [issues 5](https://github.com/lsh1994/keras-segmentation/issues/5) and so on.Thank you for your support.</font> 
 
 [中文说明](readme_zh.md)
 
 ## Environment
-win10；python3.6.7 ；
   
-Item     | Value
--------- | -----
-keras | 2.2.4  
-tensorflow-gpu | 1.10.0
+Item     | Value | Item     | Value
+:---: | :---: | :---: | :---: 
+keras | 2.2.4  | OS | win10
+tensorflow-gpu | 1.10.0 | Python| 3.6.7
 
-Reference：  
+## Reference
+  
 https://github.com/divamgupta/image-segmentation-keras  
 https://github.com/ykamikawa/SegNet  
   
