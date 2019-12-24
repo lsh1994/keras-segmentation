@@ -13,7 +13,7 @@ Implementation is not original papers. The purpose of this project is to get sta
 Item     | Value | Item     | Value
 :---: | :---: | :---: | :---: 
 keras | 2.2.4  | OS | win10
-tensorflow-gpu | 1.10.0 | Python| 3.6.7
+tensorflow-gpu | 1.10/1.12 | Python| 3.6.7
 
 ## Reference
   
