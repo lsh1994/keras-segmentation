@@ -1,5 +1,13 @@
-<font color=red>This project is no longer updated. There is a confusing place, please refer to issues 5 and so on.Thank you for your support.</font>   
+<h1 align="center"><a href="https://github.com/lsh1994/keras-segmentation" target="_blank">keras-segmentation</a></h1>
+
+<p align="center">
+Implementation is not original papers. The purpose of this project is to get started with semantic segmentation and master the basic process.
+</p>
+
+<font color=red>FCN32/8、SegNet、U-Net [Model published](https://github.com/lsh1994/keras-segmentation/releases)。There is a confusing place, please refer to issues 5 and so on.Thank you for your support.</font> 
+
 [中文说明](readme_zh.md)
+
 ## Environment
 win10；python3.6.7 ；
   
@@ -46,4 +54,4 @@ Visualization results:
 ### U-Net
 
 
-Not exactly in accordance with the realization of the paper.This project mainly helps to learn semantics segmentation model,and some data processing skills.  
+  

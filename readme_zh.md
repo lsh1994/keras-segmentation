@@ -1,4 +1,11 @@
-<font color=red>本项目不再更新。有个令人迷惑的地方，请参考issues5等。欢迎 `Pull requests`，谢谢支持。</font>
+<h1 align="center"><a href="https://github.com/lsh1994/keras-segmentation" target="_blank">keras-segmentation</a></h1>
+
+<p align="center">
+非论文的原始实现。本工程目的是用于语义分割入门，掌握基本流程。
+</p>
+
+<font color=red>已经发布模型FCN32/8、SegNet、U-Net [对应提交](https://github.com/lsh1994/keras-segmentation/releases)。有个令人迷惑的地方，请参考issues5等。</font>
+
 ## 实验环境
 win10；python3.6.7 ；
   
@@ -48,5 +55,4 @@ https://github.com/alexgkendall/SegNet-Tutorial/tree/master/CamVid
 [文章参考](https://blog.csdn.net/nima1994/article/details/86300172)
 
 
-## 注意
-非论文的原始实现。  
+  
