@@ -4,7 +4,7 @@
 Implementation is not original papers. The purpose of this project is to get started with semantic segmentation and master the basic process.
 </p>
 
-<font color=red>FCN32/8、SegNet、U-Net [Model published](https://github.com/lsh1994/keras-segmentation/releases)。There is a confusing place, please refer to [issues 5](https://github.com/lsh1994/keras-segmentation/issues/5) and so on.Thank you for your support.</font> 
+<font color=red>FCN32/8、SegNet、U-Net [Model published](https://github.com/lsh1994/keras-segmentation/releases). Thank you for your support.</font> 
 
 [中文说明](readme_zh.md)
 

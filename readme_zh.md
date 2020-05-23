@@ -4,7 +4,7 @@
 非论文的原始实现。本工程目的是用于语义分割入门，掌握基本流程。
 </p>
 
-<font color=red>已经发布模型FCN32/8、SegNet、U-Net [对应提交](https://github.com/lsh1994/keras-segmentation/releases)。有个令人迷惑的地方，请参考issues5等。</font>
+<font color=red>已经发布模型FCN32/8、SegNet、U-Net [对应提交](https://github.com/lsh1994/keras-segmentation/releases)。</font>
 
 ## 实验环境
 
